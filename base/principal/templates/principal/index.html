@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="container-fluid" id="index">
+    <div class="grid">
+        <div style="padding-left: 15rem;">
+            <article data-theme="light">
+                <header style="text-align: center;">
+                    <h2>¿Qué desea consultar?</h2>
+                </header>
+                <div class="grid">
+                    <div style="text-align: start;">
+                        <img src="{% static 'images/package.png' %}" alt="paquete" height="80px" width="80px">
+                        <br>
+                        <br>
+                        <img src="{% static 'images/letter.png' %}" alt="documento" height="80px" width="80px">
+                    </div>
+                    <div style="text-align: start; padding-top: 1rem;">
+                        <a href="{% url 'principal' %}"><h4>Paquete</h4></a>
+                        <br>
+                        <br>
+                        <a href="{% url 'principal' %}"><h4>Documento</h4></a>
+                    </div>
+                </div>
+                
+            </article>
+        </div>
+        <div></div>
+    </div>
+    <main class="container" style="margin-bottom: 15rem;">
+        <div class="grid">
+            <div><article data-theme="light"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur velit eum veritatis alias. Qui numquam cumque quas error velit omnis ipsa perspiciatis vero voluptatem inventore dolorum nemo ratione, sit magni.</p></article></div>
+            <div><article data-theme="light"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur velit eum veritatis alias. Qui numquam cumque quas error velit omnis ipsa perspiciatis vero voluptatem inventore dolorum nemo ratione, sit magni.</p></article></div>
+            <div><article data-theme="light"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur velit eum veritatis alias. Qui numquam cumque quas error velit omnis ipsa perspiciatis vero voluptatem inventore dolorum nemo ratione, sit magni.</p></article></div>
+        </div>
+        <article data-theme="light"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, minima esse ab eaque blanditiis recusandae obcaecati odit ipsam fugit iste soluta, minus molestias maxime vero, cum veritatis at accusamus corporis.</p></article>
+    </main>
+</main>
+
+{% endblock %}

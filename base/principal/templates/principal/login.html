@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="container-fluid" style="margin-top: 5rem; margin-bottom: 20rem;">
+    <div class="grid">
+        <div></div>
+        <div>
+            <article data-theme="light" style="margin-right: 6rem; margin-left: 6rem;">
+                <header>
+                    <hgroup>
+                        <h2>Inicia Sesion</h2>
+                        <h4>Si aun no tienes cuenta <a href="{% url 'register' %}">Registrate</a></h4>
+                    </hgroup>
+                </header>
+                {% if error_message %}
+                <p>{{ error_message }}</p>
+                {% endif %}
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="grid">
+                        <div style="text-align: start; vertical-align: bottom;">
+                            <p>Usuario:</p>
+                            <br>
+                            <br>
+                            <p>Contraseña:</p>
+                        </div>
+                        <div style="vertical-align: top; text-align: start;">
+                            <p><input type="text" id="username" name="username" required></p>
+                            <p><input type="password" id="password" name="password" required></p>
+                        </div>
+                    </div>
+                    <input role="button" class="contrast" type="submit" value="Iniciar sesión">
+                </form>
+            </article>
+        </div>
+    </div>
+</main>
+{% endblock %}
