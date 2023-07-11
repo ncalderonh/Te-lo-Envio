@@ -1,0 +1,182 @@
+#darkmode {
+    margin-top: 1rem;
+    text-align: end;
+}
+
+#linkNav {
+    font-size: medium;
+}
+
+footer {
+    vertical-align: bottom;
+    align-content: center;
+}
+
+footer h5{
+    color: #222;
+}
+
+footer a{
+    color: #222;
+    font-size: 18px;
+}
+
+footer li{
+    margin-left: 3rem;
+    color: #222;
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+}
+
+footer p{
+    color: #222;
+    text-align: center;
+}
+
+footer h2{
+    color: #222;
+    text-align: start;
+    vertical-align: top;
+    margin-left: 5rem;
+    font-size: 50px;
+}
+
+footer span{
+    color: #222;
+    vertical-align: bottom;
+    text-align: start;
+    margin-left: 6rem;
+    font-size: 20px;
+}
+
+footer a[role=button]{
+    text-align: center;
+    margin-left: 5rem;
+    margin-top: 3rem;
+}
+
+#foot1 {
+    padding-top: 10%;
+    padding-bottom: 20%;
+    background-color: gold;
+    background-image: url(../../images/about.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: screen;
+}
+
+#foot2 {
+    padding-top: 20%;
+    padding-bottom: 20%;
+    background-image: url(../../images/contac.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#botonNav {
+    font-size: small;
+    margin-top: 4px;
+    vertical-align: top;
+    text-align: center;
+}
+#botonNav[role=button] {
+    border-radius: 45px;
+    width: auto;
+    height: 32px;
+    margin-top: 4px;
+    vertical-align: super;
+    text-align: center;
+}
+
+#index{
+    background-image: url(../../images/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#indexPro {
+    background-image: url(../../images/headerPro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+label #darkmode-toggle{
+    width: 80px;
+    height: 32px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 32px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+label:after #darkmode-toggle{
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+input #darkmode-toggle{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+input:checked+label #darkmode-toggle{
+    background: #242424;
+}
+
+input:checked+label:after #darkmode-toggle{
+    left: 75px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+label,
+label:after #darkmode-toggle{
+    transition: 0.3s
+}
+
+label:active:after #darkmode-toggle{
+    width: 2px;
+}
+
+input:checked+label+.background #darkmode-toggle{
+    background: #242424;
+}
+
+label svg {
+    position: absolute;
+    width: 24px;
+    top: 4px;
+    z-index: 100;
+}
+
+label svg.sun {
+    left: 4px;
+    fill: #fff;
+    transition: 0.3s;
+}
+
+label svg.moon {
+    left: 54px;
+    fill: #7e7e7e;
+    transition: 0.3s;
+}
+
+input:checked+label svg.sun {
+    fill: #7e7e7e;
+}
+
+input:checked+label svg.moon {
+    fill: #ffffff;
+}
